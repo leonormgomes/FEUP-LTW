@@ -1,0 +1,156 @@
+main#settings {
+	margin-top: 1.5rem;
+	background-color: var(--background);
+	padding: 0 0;
+	min-height: 100vh;
+
+	h1 {
+		font-size: 3rem;
+		padding-top: 7rem;
+		font-weight: normal;
+	}
+
+	h2 {
+		font-size: 2rem;
+		font-weight: normal;
+	}
+
+	form {
+		position: relative;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1px 2fr 1fr;
+		grid-template-rows: auto;
+		grid-template-areas:
+			'settings_header	. 							. 								.'
+			'profile_header 	profile_divider profile_settings 	.'
+			'account_header 	account_divider account_settings 	.'
+			'.              	. 							submit           	.';
+		gap: 5rem 2.5rem;
+
+		.header {
+			display: flex;
+			align-items: center;
+		}
+
+		.divider {
+			background-color: #ebd2c4;
+		}
+
+		h1#settings_header {
+			justify-self: end;
+			margin: -5rem 0;
+		}
+
+		h2#profile_header {
+			grid-area: profile_header;
+			justify-self: end;
+		}
+
+		div#profile_divider {
+			grid-area: profile_divider;
+		}
+
+		input[type='file'] {
+			display: none;
+		}
+
+		img {
+			cursor: pointer;
+		}
+
+		img:hover {
+			opacity: 50%;
+		}
+
+		label {
+			display: flex;
+			margin: 0.5rem 0;
+			font-weight: bold;
+			padding: 0;
+
+			input, textarea {
+				display: block;
+				position: absolute;
+				left: 10rem;
+				font-size: 16px;
+			}
+
+			input[type='text'], textarea {
+				width: 85%; // TODO fix
+				resize: none;
+			}
+		}
+
+		fieldset#profile_form {
+			grid-area: profile_settings;
+			position: relative;
+			border-radius: 0rem 0rem 0.5rem 0.5rem;
+
+			img#cover {
+				border-radius: var(--border-radius);
+				width: 100%;
+				height: 20rem;
+				object-fit: cover;
+			}
+
+			div#profile_photo {
+				position: absolute;
+				height: 13rem;
+				width: 9.5rem;
+				top: 11rem;
+				left: 7rem;
+				padding: 0.35rem;
+				border-radius: 0.5rem;
+				background-color: var(--soft-color);
+
+				img {
+					object-fit: cover;
+					width: 100%;
+					height: 100%;
+					border-radius: 0.5rem;
+				}
+			}
+
+			fieldset#profile_info {
+				margin-top: 4rem;
+				position: relative;
+			}
+		}
+
+		h2#account_header {
+			grid-area: account_header;
+			justify-self: end;
+		}
+
+		div#account_divider {
+			grid-area: account_divider;
+		}
+
+		fieldset#account_form {
+			grid-area: account_settings;
+			position: relative;
+
+			label#username > input:before {
+				content: '@';
+			}
+		}
+
+		div#submit {
+			grid-area: submit;
+			margin-top: -2rem;
+			display: flex;
+			align-items: center;
+
+			input[type='submit'] {
+				width: fit-content;
+				border: 1px solid var(--hard-color);
+				border-radius: var(--border-radius);
+				padding: 0.5rem;
+				color: var(--hard-color);
+				cursor: pointer;
+				margin-right: 1rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* Global imports */
+@import 'globals.scss';
+@import 'templates/modal/modal.scss';
+
+/* Template imports */
+@import 'templates/login-register/style.scss';
+@import 'templates/profile/style.scss';
+@import 'templates/index/style.scss';
+@import 'templates/settings/style.scss';
+@import 'templates/feed/style.scss';
+@import 'templates/common/navbar.scss';
+@import 'templates/search/style.scss';
+@import 'templates/animal/style.scss';
+@import 'templates/add_animal/style.scss';
+@import 'templates/post/style.scss';

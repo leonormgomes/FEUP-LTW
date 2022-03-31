@@ -1,0 +1,234 @@
+div#index_landing {
+	background-color: var(--background);
+	padding: 50px;
+	height: 100vh;
+
+	@media screen and (max-width: 800px) {
+		background-color: var(--soft-color);
+	}
+
+	#rectangle {
+		background-color: #fef3ee; //add global variable
+		width: 100%;
+		height: 100%;
+		border-radius: var(--border-radius);
+
+		@media screen and (max-width: 800px) {
+			display: none;
+		}
+	}
+
+	nav {
+		float: right;
+		// width: fit-content;
+		padding: 2% 1% 0px 0px;
+
+		@media screen and (max-width: 800px) {
+			width: 100%;
+			margin-left: auto;
+		}
+
+		@media screen and (max-width: 500px) {
+			display: flex;
+			justify-content: center;
+		}
+
+		a {
+			font-family: var(--text-font);
+			font-size: 1.5rem;
+			text-decoration: none;
+			color: black;
+			margin: 1rem;
+
+			transition: 0.3s;
+
+			@media screen and (max-width: 500px) {
+				background-color: var(--hard-color);
+				color: white;
+				border-radius: 1rem;
+				padding: 1rem;
+				background: var(--hard-color);
+				// background: linear-gradient(90deg, rgba(255, 126, 0, 1) 0%, rgba(252, 176, 69, 1) 100%);
+			}
+		}
+
+		a:hover {
+			color: var(--hard-color);
+		}
+	}
+
+	h1 {
+		font-family: var(--title-font);
+		font-size: 3.5vw;
+		position: absolute;
+		top: 27rem;
+		left: 10vw;
+		cursor: default;
+
+		span {
+			color: var(--hard-color);
+			font-family: var(--title-font);
+		}
+
+		@media screen and (max-width: 800px) {
+			position: static;
+			width: 100%;
+			// display: flex;
+			text-align: center;
+			font-size: 5vw;
+			margin-top: 15vh;
+    }
+    
+    @media screen and (max-width: 500px) {
+      font-size: 14vw;
+      text-align: left;
+      
+			// margin-top: 2vh;
+		}
+	}
+
+	#images {
+		@media screen and (max-width: 800px) {
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-around;
+
+			height: 20rem;
+    }
+    
+    @media screen and (max-width: 500px) {
+      display: block;
+      flex-direction: column;
+      margin-top: 1.5rem;
+    }
+
+		.image {
+			position: absolute;
+			border-radius: var(--border-radius);
+			box-shadow: var(--box-shadow);
+
+			@media screen and (max-width: 800px) {
+				position: static;
+				box-shadow: none;
+				margin: 1rem;
+      }
+      
+      @media screen and (max-width: 500px) {
+        margin: 0;
+      }
+		}
+
+		#yellow {
+			width: 20vw;
+			height: 23rem;
+			background-image: url('../assets/yellow.jpg');
+			background-size: cover;
+			background-position: center center;
+
+			left: 12vw;
+			top: 1rem;
+
+			@media screen and (max-width: 800px) {
+				width: 100%;
+				height: auto;
+      }
+      
+      @media screen and (max-width: 500px) {
+				width: auto;
+        height: 100%;
+        margin: 0;
+			}
+		}
+
+		#green {
+			width: 20vw;
+			height: 23rem;
+			background-image: url('../assets/green.jpg');
+			background-size: cover;
+			background-position: center center;
+
+			left: 18vw;
+			top: 35rem;
+
+			@media screen and (max-width: 800px) {
+				width: 100%;
+				height: auto;
+      }
+      
+      @media screen and (max-width: 500px) {
+				width: 105%;
+        height: 100%;
+        position: relative;
+        top: -18.5rem;
+        left: -2.5%;
+			}
+		}
+
+		#orange {
+			width: 25vw;
+			height: 37rem;
+			background-image: url('../assets/orange.jpg');
+			background-size: cover;
+			background-position: center center;
+
+			left: 60vw;
+			top: 13rem;
+
+			@media screen and (max-width: 800px) {
+				width: 100%;
+				height: auto;
+      }
+      
+      @media screen and (max-width: 500px) {
+				width: 110%;
+        height: 100%;
+        position: relative;
+        top: -37rem;
+        left: -5%;
+			}
+		}
+	}
+}
+
+section#index_offers {
+	background-color: var(--background);
+	padding: 20%;
+
+	article {
+		margin: 20%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		img {
+			width: 15vw;
+			height: 47vh;
+			margin-right: 5vw;
+			object-fit: cover;
+			border-radius: var(--border-radius);
+		}
+
+		div {
+			width: 60vw;
+			height: 50vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin-left: 5vw;
+			font-size: 1.3rem;
+			font-family: 'Arial'; // change font family to global variable
+			box-shadow: 20px 20px 5px 10px #fceae2; //add global variable
+
+			h3 {
+				font-family: 'Times New Roman'; //change font family to global variable
+				font-size: 2em;
+				font-weight: 100;
+				margin-bottom: 1.2rem;
+			}
+
+			p {
+				width: 30vw;
+			}
+		}
+	}
+}

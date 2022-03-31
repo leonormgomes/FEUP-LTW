@@ -1,0 +1,21 @@
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 10;
+
+  height: 100%;
+  width: 100%;
+
+  overflow-y: hidden;
+
+  background-color: rgba(227, 119, 70, 0.3);
+
+  display: none;
+  align-content: center;
+
+  img {
+    object-fit: cover;
+  }
+}

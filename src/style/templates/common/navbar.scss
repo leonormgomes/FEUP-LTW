@@ -1,0 +1,171 @@
+nav#navbar,
+nav#navbar-mobile {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	z-index: 3;
+
+	height: 3.5rem;
+	width: 100%;
+
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 'nav-profile nav-search nav-buttons';
+
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+nav#navbar {
+	@media screen and (max-width: 500px) {
+		display: none;
+	}
+}
+
+nav#navbar-mobile {
+	display: none;
+
+	opacity: 1;
+	background-color: var(--background);
+	height: auto;
+	width: 100%;
+
+	padding: 0.5rem;
+
+	#navbar-search {
+		width: auto;
+	}
+
+	#navbar-profile {
+		width: 100%;
+		margin: auto;
+
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: space-around;
+
+		@media screen and (max-width: 500px) {
+			display: flex;
+    }
+    
+    * {
+      margin: 0;
+      color: var(--hard-color);
+    }
+	}
+
+	@media screen and (max-width: 500px) {
+		display: flex;
+	}
+}
+
+#navbar-profile {
+	grid-area: nav-profile;
+
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	margin-left: 1rem;
+
+	a {
+		display: flex;
+		align-items: center;
+
+		&.nav-button {
+			color: var(--hard-color);
+
+			background-color: var(--background);
+
+			padding: 0.5rem 1rem;
+			border-radius: 10px;
+			margin-left: 1.5rem;
+
+			@media screen and (max-width: 500px) {
+				padding: 0;
+				background-color: initial;
+			}
+
+			i {
+				margin-right: 0.5rem;
+			}
+		}
+	}
+
+	img {
+		width: 2rem;
+		height: 2rem;
+
+		border-radius: 50%;
+
+		object-fit: cover;
+
+		margin: auto 0;
+	}
+
+	span {
+		margin-left: 0.5rem;
+	}
+}
+
+#navbar-search {
+	display: flex;
+	align-items: center;
+
+	grid-area: nav-search;
+
+	width: 100%;
+	height: 100%;
+
+	form {
+		width: 100%;
+	}
+
+	form input {
+		width: 100%;
+
+		margin: auto 0;
+
+		padding: 0.5rem 1rem;
+
+		border-radius: 10px;
+
+		background-color: rgba(255, 246, 240, 0.7);
+
+		transition: 0.3s;
+
+		color: rgba(0, 0, 0, 0.7);
+
+		&:hover {
+			background-color: #fff6f0;
+		}
+
+		&::placeholder {
+			color: gray;
+		}
+	}
+}
+
+#navbar-buttons {
+	grid-area: nav-buttons;
+
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+	margin-right: 1rem;
+
+	a {
+		color: var(--hard-color);
+
+		i {
+			margin-left: 0.5rem;
+		}
+	}
+}

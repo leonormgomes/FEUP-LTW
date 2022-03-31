@@ -1,0 +1,147 @@
+div#login_landing_page {
+	position: relative;
+	height: 100vh;
+	padding: 50px;
+  background-color: var(--background);
+
+	@media screen and (max-width: 800px) {
+    display: block;
+		background-color: var(--soft-color);
+	}
+
+	h1 {
+		position: absolute;
+		top: -5rem;
+		left: 8vw;
+		font-family: var(--title-font);
+		font-size: 25vw;
+		font-weight: 100;
+    opacity: 0.12;
+    
+    @media screen and (max-width: 800px) {
+			position: static;
+			width: 100%;
+			text-align: center;
+      font-size: 25vw;
+      position: static;
+    }
+	}
+
+	a {
+		color: var(--hard-color);
+	}
+
+	div.page_background {
+		width: 100%;
+		height: 100%;
+		background: var(--soft-color);
+		border-radius: var(--border-radius);
+
+		@media screen and (max-width: 800px) {
+			display: none;
+		}
+	}
+
+	div#login_page_background {
+		height: 85%;
+	}
+
+	div.front_image {
+		position: absolute;
+		width: 27vw;
+		height: 46rem;
+		top: 7rem;
+		left: 60vw;
+		background-size: cover;
+		background-position: 50% center;
+		border-radius: var(--border-radius);
+		box-shadow: var(--box-shadow);
+
+		@media screen and (max-width: 800px) {
+			display: none;
+		}
+	}
+
+	div#image_login {
+		background-image: url('../assets/login-photo.jpg');
+	}
+
+	div#image_register {
+		background-image: url('../assets/register-photo.jpg');
+	}
+
+	div#auth_form {
+		position: absolute;
+		top: 30rem;
+		left: 13vw;
+    width: 20vw;
+    
+    @media screen and (max-width: 800px) {
+      width: auto;
+      position: static;
+    }
+    
+    @media screen and (max-width: 500px) {
+		}
+
+		form {
+			position: relative;
+
+			label {
+				color: #589ec2;
+				font-family: var(--text-font);
+				font-size: 1.3rem;
+
+				input {
+					background-color: var(--background);
+					border-radius: var(--border-radius);
+					padding: 0.5em;
+					width: 100%;
+					font-family: var(--text-font);
+					font-size: 1.3rem;
+          margin: 0.2rem 0 1.3rem 0;
+				}
+
+				input::placeholder {
+					color: rgb(143, 143, 143);
+				}
+			}
+
+			div {
+				display: flex;
+
+				label:first-of-type {
+					margin-right: 10%;
+				}
+			}
+
+			button[type='submit'] {
+				/* Temporary */
+				position: absolute;
+				right: 0;
+				bottom: 32px;
+				font-size: 1.3rem;
+				margin-right: 0.5em;
+				cursor: pointer;
+			}
+		}
+
+		div#login_extra {
+			width: 100%;
+			display: flex;
+			flex-wrap: nowrap;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+			align-items: stretch;
+			align-content: flex-start;
+
+			div {
+				max-width: 50%;
+			}
+		}
+	}
+}
+
+div#error_message {
+	color: var(--error-color);
+}
